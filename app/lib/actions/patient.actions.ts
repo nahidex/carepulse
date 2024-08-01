@@ -1,7 +1,13 @@
 "use server";
 
 import { ID, Query, InputFile } from "node-appwrite";
-import { databases, storage, users } from "@/app/lib/appwrite.config";
+import {
+    databases,
+    PROJECT_ID,
+    storage,
+    users,
+} from "@/app/lib/appwrite.config";
+
 import { parseStringify } from "../utils";
 
 export const createUser = async (user: CreateUserParams) => {
@@ -55,7 +61,7 @@ export const registerPatient = async ({
                 );
         }
         const newPatient = await databases.createDocument(
-            "66a402d9003db0bc6324",
+            PROJECT_ID!,
             "66a402f20037c5c6b03b",
             ID.unique(),
             {
