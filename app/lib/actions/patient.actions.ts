@@ -61,7 +61,7 @@ export const registerPatient = async ({
                 );
         }
         const newPatient = await databases.createDocument(
-            PROJECT_ID!,
+            "66a40259000db4d54f98",
             "66a402f20037c5c6b03b",
             ID.unique(),
             {
